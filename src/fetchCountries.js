@@ -1,5 +1,5 @@
-function fetchCountries(name) {
-    fetch(`https://restcountries.com/v3.1/{name}`)
+export function fetchCountries(name) {
+    return fetch(`https://restcountries.com/v3.1/name/${name}`)
         .then(
         response => {
     if (!response.ok) {
@@ -7,5 +7,4 @@ function fetchCountries(name) {
     }
     return response.json();
             })
-   
-}
+   }
